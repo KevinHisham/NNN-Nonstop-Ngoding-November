@@ -35,11 +35,11 @@ if (empty($firstNumber) || empty($secondNumber) || empty($operation)) {
     
 <div class="container text-center" style="padding: 50px 250px 0 250px">
   <div class="row">
-  <div class="card">
-  <div class="card-body">
-  <h4 class="card-title mb-4">Kalkulator Dasar</h4>
-    <div class="col ">
-        <form action="" method="POST">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Kalkulator Dasar</h4>
+                <div class="col ">
+                    <form action="" method="POST">
                         <div class="form-floating mb-3">
                             <input type="number" class="form-control" name="firstNumber" id="firstNumber" placeholder="175" value="<?= isset($firstNumber) ? $firstNumber : ''; ?>">
                             <label for="firstNumber">Isi</label>
@@ -58,23 +58,23 @@ if (empty($firstNumber) || empty($secondNumber) || empty($operation)) {
                             <label for="secondNumber">Isi</label>
                         </div>
                         <button type="submit" class="btn btn-primary mb-3 mt-3 w-100">Hitung</button>
-        </form>
+                    </form>
 
-        <?php
+                    <?php
                     if (!empty($hasil)) {
                         echo "<div class='alert alert-success'>Hasil: $hasil</div>";
-                    }
-                    ?>
-                    <!-- Hasil pesan error ditampilkan di sini -->
-                    <?php
-                    if (!empty($error)) {
+                    } else {
                         echo "<div class='alert alert-danger'>$error</div>";
                     }
                     ?>
-    </div>
-  </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
+<a href="Day 2 Food Menu.php" class="btn btn-primary mb-3 mt-3 w-25">Day-2</a>
+
 
 </body>
 </html>
